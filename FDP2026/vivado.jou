@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Oct 23 02:48:25 2026
+# Process ID         : 9556
+# Current directory  : C:/Users/cheeh/AppData/Roaming/Xilinx/Vivado
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent11564
+# Log file           : C:/Users/cheeh/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file       : C:/Users/cheeh/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On         : cheese
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 PRO 4650U with Radeon Graphics
+# CPU Frequency      : 2096 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16349 MB
+# Swap memory        : 1073 MB
+# Total Virtual      : 17422 MB
+# Available Virtual  : 7853 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/cheeh/Desktop/FDP2026/FDP2026.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/clock_gen.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/player_input.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/uart_tx.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/My_Top_Module.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/kitchen.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/orders.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/font5x7.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/btn_conditioner.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/vga_renderer.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/game_core.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/game_flow.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/item_sprite.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/oled_renderer.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/physics_step.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/map_rom.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/seven_seg.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/digits.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/object_physics.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/link.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/Oled_Display.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/chef_motion.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/predictor.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/vga_timing.v C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/uart_rx.v}
+update_compile_order -fileset sources_1
+remove_files  -fileset constrs_1 C:/Users/cheeh/Desktop/FDP2026/FDP2026.srcs/constrs_1/new/Basys3_Master.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210183BD3738A}
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210183BD3709A}
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0_1]
+current_hw_device [get_hw_devices xc7a35t_0_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0_1]
+program_hw_devices [get_hw_devices xc7a35t_0_1]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0_1]
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0_1]
+program_hw_devices [get_hw_devices xc7a35t_0_1]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0_1] 0]
+close_hw_target {localhost:3121/xilinx_tcf/Digilent/210183BD3709A}
+open_hw_target {localhost:3121/xilinx_tcf/Digilent/210183BD3738A}
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/impl_1/My_Top_Module.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+archive_project {C:/Users/cheeh/Desktop/Kitchen Rush.xpr.zip} -temp_dir C:/Users/cheeh/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9556-cheese -force -include_local_ip_cache -include_config_settings

@@ -1,0 +1,52 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 23 03:12:11 2026
+| Host         : cheese running 64-bit major release  (build 9200)
+| Command      : report_methodology -file My_Top_Module_methodology_drc_routed.rpt -pb My_Top_Module_methodology_drc_routed.pb -rpx My_Top_Module_methodology_drc_routed.rpx
+| Design       : My_Top_Module
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 3
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| Rule      | Severity | Description                                                                                           | Checks |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+| TIMING-9  | Warning  | Unknown CDC Logic                                                                                     | 1      |
+| TIMING-10 | Warning  | Missing property on synchronizer                                                                      | 1      |
+| TIMING-47 | Warning  | False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks | 1      |
++-----------+----------+-------------------------------------------------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-47#1 Warning
+False path, asynchronous clock group or max delay datapath only constraint between synchronous clocks  
+A Clock Group timing constraint is set between synchronous clocks clk25 and clk6p25 (see constraint position 4 in the Timing Constraint window in Vivado IDE). Masking entire synchronous clock domains via  set_false_path, set_clock_groups or set_max_delay -datapath_only may result in failure in hardware.
+Related violations: <none>
+
+

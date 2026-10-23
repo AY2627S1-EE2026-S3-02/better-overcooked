@@ -1,0 +1,202 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Oct 23 03:11:06 2026
+| Host         : cheese running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file My_Top_Module_control_sets_placed.rpt
+| Design       : My_Top_Module
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   124 |
+|    Minimum number of control sets                        |   124 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   320 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   124 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |    27 |
+| >= 6 to < 8        |    12 |
+| >= 8 to < 10       |    17 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |    28 |
+| >= 16              |    31 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             100 |           51 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             270 |          133 |
+| Yes          | No                    | No                     |             165 |           56 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1521 |          651 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                Enable Signal                |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+---------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  clk25_BUFG    | u_link/u_tx/tx_i_1_n_0                      | u_game/u_pred/SR[0]                 |                1 |              1 |         1.00 |
+| ~clk6p25_BUFG  |                                             |                                     |                1 |              1 |         1.00 |
+|  clk6p25_BUFG  |                                             |                                     |                1 |              2 |         2.00 |
+|  clk25_BUFG    | u_vga/E[0]                                  |                                     |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[3][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[2][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[0][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              4 |         2.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[6][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[5][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              4 |         2.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[1][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg[0]                | u_game/u_pred/SR[0]                 |                2 |              4 |         2.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[4][3]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_orders/t[2][11]_i_1_n_0            | u_game/u_flow/lfsr1                 |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_orders/t[0][11]_i_1_n_0            | u_game/u_flow/lfsr1                 |                2 |              4 |         2.00 |
+|  clk25_BUFG    | u_game/u_orders/t[1][11]_i_1_n_0            | u_game/u_flow/lfsr1                 |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_link/u_tx/E[0]                            | u_sw/frame_tick_reg[0]              |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_kitchen/oty[0]                     | u_game/u_flow/round_reset_reg_0[0]  |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                                             |                                     |                1 |              4 |         4.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_12[0]             | u_game/u_pred/SR[0]                 |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[0]                     | u_game/u_flow/round_reset_reg_0[0]  |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_kitchen/prio                       | u_game/u_flow/round_reset_reg_0[0]  |                1 |              5 |         5.00 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[0][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[3][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_link/u_rx/idle_ms_reg[2][0]               | u_sw/deb[14].clean_reg[14]_2[0]     |                1 |              5 |         5.00 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[4][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              5 |         5.00 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[6][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[5][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[1][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_2[0]              | u_game/u_pred/SR[0]                 |                2 |              5 |         2.50 |
+|  clk25_BUFG    | u_game/u_kitchen/otx[2][4]_i_1_n_0          | u_game/u_flow/round_reset_reg_0[0]  |                1 |              5 |         5.00 |
+|  clk25_BUFG    | u_game/u_flow/sub[0]                        | u_game/u_pred/SR[0]                 |                2 |              6 |         3.00 |
+|  clk25_BUFG    | u_link/p_0_in                               |                                     |                3 |              7 |         2.33 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[6][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                3 |              7 |         2.33 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[4][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                2 |              7 |         3.50 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[0][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                2 |              7 |         3.50 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[1][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                3 |              7 |         2.33 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[5][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                4 |              7 |         1.75 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[0]                    | u_game/u_flow/round_reset_reg_0[0]  |                2 |              7 |         3.50 |
+|  clk25_BUFG    | u_game/u_in1/cnt[0]                         | u_sw/deb[14].clean_reg[14]_7[0]     |                4 |              7 |         1.75 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[2][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                3 |              7 |         2.33 |
+|  clk25_BUFG    | u_game/u_in2/cnt[0]                         | u_sw/remote_btn_reg[0]_0[0]         |                3 |              7 |         2.33 |
+|  clk25_BUFG    | u_game/u_kitchen/chop[3][6]_i_1_n_0         | u_game/u_flow/round_reset_reg_0[0]  |                3 |              7 |         2.33 |
+|  clk25_BUFG    | u_game/u_kitchen/E[0]                       | u_game/u_orders/t[0][7]_i_1_n_0     |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_game/u_orders/score[9]_i_1_n_0            | u_game/u_flow/lfsr1                 |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_game/u_pred/SR[0]                         |                                     |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_link/u_rx/data[7]_i_1_n_0                 |                                     |                2 |              8 |         4.00 |
+|  clk25_BUFG    | u_link/u_rx/data_reg[6]_0[0]                | u_sw/deb[14].clean_reg[14]_2[0]     |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_link/u_rx/sh[7]_i_1__0_n_0                |                                     |                2 |              8 |         4.00 |
+|  clk25_BUFG    | u_link/u_rx/E[0]                            | u_link/u_rx/valid_reg_3[0]          |                5 |              8 |         1.60 |
+|  clk25_BUFG    | u_link/u_tx/cnt[0]                          | u_game/u_pred/SR[0]                 |                4 |              8 |         2.00 |
+|  clk25_BUFG    | u_link/u_tx/sh[7]_i_1_n_0                   |                                     |                2 |              8 |         4.00 |
+|  clk25_BUFG    | u_link/u_tx/E[0]                            | u_sw/deb[14].clean_reg[14]_2[0]     |                4 |              8 |         2.00 |
+|  clk25_BUFG    | u_link/u_rx/cnt_0[0]                        | u_game/u_pred/SR[0]                 |                4 |              8 |         2.00 |
+|  clk25_BUFG    | u_game/u_kitchen/serve_valid_reg_1[0]       | u_game/u_orders/t[2][7]_i_1_n_0     |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_game/u_kitchen/serve_valid_reg_0[0]       | u_game/u_orders/t[1][7]_i_1_n_0     |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_game/u_flow/time_s[7]_i_1_n_0             | u_game/u_pred/SR[0]                 |                4 |              8 |         2.00 |
+|  clk25_BUFG    | u_game/u_flow/serve_valid_reg[0]            | u_game/u_pred/SR[0]                 |                3 |              8 |         2.67 |
+|  clk25_BUFG    | u_game/u_kitchen/pot_timer[0][8]_i_1_n_0    | u_game/u_flow/round_reset_reg_0[0]  |                4 |              9 |         2.25 |
+|  clk25_BUFG    | u_game/u_kitchen/pot_timer[0]               | u_game/u_flow/round_reset_reg_0[0]  |                4 |              9 |         2.25 |
+|  clk25_BUFG    |                                             | u_vga/h[9]_i_1_n_0                  |                3 |             10 |         3.33 |
+|  clk25_BUFG    | u_game/u_flow/FSM_sequential_state_reg[0]_0 | u_game/u_flow/SR[0]                 |                2 |             10 |         5.00 |
+|  clk25_BUFG    | u_vga/v_0[0]                                | u_game/u_pred/SR[0]                 |                3 |             10 |         3.33 |
+|  clk25_BUFG    |                                             | u_game/u_flow/lfsr1                 |                9 |             11 |         1.22 |
+|  clk25_BUFG    |                                             | u_sw/is_ctrl                        |                3 |             12 |         4.00 |
+|  clk25_BUFG    |                                             | u_vga/v_reg[9]_0                    |                9 |             12 |         1.33 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[3][0]_4[1]         | u_game/u_kitchen/loc_reg[3][0]_5[0] |                3 |             14 |         4.67 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[1][0]_2[1]         | u_game/u_kitchen/loc_reg[1][0]_3[0] |                4 |             14 |         3.50 |
+|  clk25_BUFG    | u_sw/frame_tick_reg_3[0]                    |                                     |                6 |             14 |         2.33 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[5][0]_2[1]         | u_game/u_kitchen/loc_reg[5][0]_3[0] |                3 |             14 |         4.67 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[4][0]_6[1]         | u_game/u_kitchen/loc_reg[4][0]_7[0] |                3 |             14 |         4.67 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[6][0]_2[1]         | u_game/u_kitchen/loc_reg[6][0]_3[0] |                4 |             14 |         3.50 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[0][0]_5[1]         | u_game/u_kitchen/loc_reg[0][0]_6[0] |                3 |             14 |         4.67 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[2][0]_4[1]         | u_game/u_kitchen/loc_reg[2][0]_5[0] |                5 |             14 |         2.80 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[7][0]_3[1]         | u_game/u_kitchen/SR[0]              |                4 |             14 |         3.50 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[2]              | u_game/u_pred/SR[0]                 |                4 |             15 |         3.75 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[7]              | u_game/u_pred/SR[0]                 |                3 |             15 |         5.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[6]              | u_game/u_pred/SR[0]                 |                3 |             15 |         5.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_7                 | u_game/u_pred/SR[0]                 |                4 |             15 |         3.75 |
+|  clk25_BUFG    |                                             | en_1khz0                            |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_4                 | u_game/u_pred/SR[0]                 |                4 |             15 |         3.75 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_5                 | u_game/u_pred/SR[0]                 |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_6                 | u_game/u_pred/SR[0]                 |                4 |             15 |         3.75 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_8                 | u_game/u_pred/SR[0]                 |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_10                | u_game/u_pred/SR[0]                 |                4 |             15 |         3.75 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[3]              | u_game/u_pred/SR[0]                 |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_11                | u_game/u_pred/SR[0]                 |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_9                 | u_game/u_pred/SR[0]                 |                6 |             15 |         2.50 |
+|  clk25_BUFG    | u_game/u_pred/sim/E[0]                      | u_game/u_pred/SR[0]                 |                7 |             15 |         2.14 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[4]              | u_game/u_pred/SR[0]                 |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[5]              | u_game/u_pred/SR[0]                 |                4 |             15 |         3.75 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[1]              | u_game/u_pred/SR[0]                 |                5 |             15 |         3.00 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_14[0]             | u_game/u_pred/SR[0]                 |                7 |             15 |         2.14 |
+|  clk25_BUFG    | u_game/u_pred/sim/who_reg_3[0]              | u_game/u_pred/SR[0]                 |                6 |             15 |         2.50 |
+| ~clk6p25_BUFG  |                                             | u_oled/frame_counter[0]_i_1_n_0     |                5 |             17 |         3.40 |
+| ~clk6p25_BUFG  | u_oled/delay[0]_i_1_n_0                     | oled_rst_sync[1]                    |                5 |             20 |         4.00 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_idx_reg[1]_1[0]     | u_game/u_flow/lfsr1                 |               10 |             23 |         2.30 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_idx_reg[0]_0[0]     | u_game/u_flow/lfsr1                 |               10 |             23 |         2.30 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_valid_reg_4[0]      | u_game/u_flow/lfsr1                 |               11 |             23 |         2.09 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_idx_reg[0]_2[0]     | u_game/u_flow/lfsr1                 |               11 |             23 |         2.09 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_idx_reg[0]_6[0]     | u_game/u_flow/lfsr1                 |               11 |             23 |         2.09 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_valid_reg_2[0]      | u_game/u_flow/lfsr1                 |               12 |             23 |         1.92 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_idx_reg[0]_4[0]     | u_game/u_flow/lfsr1                 |               12 |             23 |         1.92 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_valid_reg_5[0]      | u_game/u_flow/lfsr1                 |               13 |             23 |         1.77 |
+|  clk25_BUFG    | u_game/u_flow/E[0]                          | u_game/u_flow/round_reset_reg_0[0]  |               17 |             30 |         1.76 |
+|  clk25_BUFG    | u_game/u_kitchen/launch_valid_i_1_n_0       | u_game/u_flow/round_reset_reg_0[0]  |               16 |             31 |         1.94 |
+| ~clk6p25_BUFG  | u_oled/state[0]                             | oled_rst_sync[1]                    |                8 |             32 |         4.00 |
+|  clk25_BUFG    |                                             | u_game/u_pred/SR[0]                 |               19 |             33 |         1.74 |
+|  clk25_BUFG    | u_sw/frame_tick_reg_2[0]                    | u_game/u_pred/SR[0]                 |                9 |             34 |         3.78 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[1][0]_2[0]         | u_game/u_flow/lfsr1                 |               28 |             42 |         1.50 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[3][0]_4[0]         | u_game/u_flow/lfsr1                 |               22 |             42 |         1.91 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[5][0]_2[0]         | u_game/u_flow/lfsr1                 |               27 |             42 |         1.56 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[2][0]_4[0]         | u_game/u_flow/lfsr1                 |               23 |             42 |         1.83 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[4][0]_6[0]         | u_game/u_flow/lfsr1                 |               26 |             42 |         1.62 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[7][0]_3[0]         | u_game/u_flow/lfsr1                 |               20 |             42 |         2.10 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[0][0]_5[0]         | u_game/u_flow/lfsr1                 |               31 |             42 |         1.35 |
+|  clk25_BUFG    | u_game/u_kitchen/loc_reg[6][0]_2[0]         | u_game/u_flow/lfsr1                 |               24 |             42 |         1.75 |
+|  clk25_BUFG    | u_link/u_rx/valid_reg_2[0]                  | u_sw/deb[14].clean_reg[14]_2[0]     |               24 |             45 |         1.88 |
+| ~clk6p25_BUFG  |                                             | u_oled/spi_word[39]_i_1_n_0         |               18 |             45 |         2.50 |
+|  clk25_BUFG    | u_link/u_rx/E[0]                            | u_sw/deb[14].clean_reg[14]_2[0]     |               18 |             47 |         2.61 |
+|  clk25_BUFG    | u_sw/frame_tick_reg_0[0]                    |                                     |                9 |             48 |         5.33 |
+|  clk25_BUFG    | en_1khz                                     |                                     |               28 |             60 |         2.14 |
+|  clk25_BUFG    | u_game/u_pred/step[5]_i_1_n_0               | u_game/u_pred/SR[0]                 |               27 |             65 |         2.41 |
+|  clk25_BUFG    |                                             |                                     |               48 |             93 |         1.94 |
+|  clk25_BUFG    |                                             | u_game/u_flow/round_reset_reg_0[0]  |               62 |            115 |         1.85 |
++----------------+---------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+
+

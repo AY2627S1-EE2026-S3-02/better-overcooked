@@ -1,0 +1,709 @@
+
+*** Running vivado
+    with args -log My_Top_Module.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source My_Top_Module.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct 23 03:05:31 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source My_Top_Module.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 524.332 ; gain = 218.578
+Command: synth_design -top My_Top_Module -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15352
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1254.527 ; gain = 540.949
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'My_Top_Module' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/My_Top_Module.v:29]
+INFO: [Synth 8-6157] synthesizing module 'clock_gen' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/clock_gen.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'clock_gen' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/clock_gen.v:9]
+INFO: [Synth 8-6157] synthesizing module 'btn_conditioner' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/btn_conditioner.v:10]
+	Parameter N bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'btn_conditioner' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/btn_conditioner.v:10]
+INFO: [Synth 8-6157] synthesizing module 'btn_conditioner__parameterized0' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/btn_conditioner.v:10]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'btn_conditioner__parameterized0' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/btn_conditioner.v:10]
+INFO: [Synth 8-6157] synthesizing module 'vga_timing' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/vga_timing.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'vga_timing' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/vga_timing.v:10]
+INFO: [Synth 8-6157] synthesizing module 'link' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/link.v:12]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/uart_tx.v:7]
+	Parameter CPB bound to: 217 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/uart_tx.v:7]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/uart_rx.v:6]
+	Parameter CPB bound to: 217 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/uart_rx.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'link' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/link.v:12]
+INFO: [Synth 8-6157] synthesizing module 'game_core' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/game_core.v:10]
+INFO: [Synth 8-6157] synthesizing module 'player_input' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/player_input.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'player_input' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/player_input.v:18]
+INFO: [Synth 8-6157] synthesizing module 'game_flow' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/game_flow.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'game_flow' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/game_flow.v:12]
+INFO: [Synth 8-6157] synthesizing module 'chef_motion' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/chef_motion.v:59]
+INFO: [Synth 8-6157] synthesizing module 'chef_mover' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/chef_motion.v:13]
+INFO: [Synth 8-6157] synthesizing module 'map_rom' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/map_rom.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'map_rom' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/map_rom.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'chef_mover' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/chef_motion.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'chef_motion' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/chef_motion.v:59]
+INFO: [Synth 8-6157] synthesizing module 'object_physics' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/object_physics.v:19]
+INFO: [Synth 8-6157] synthesizing module 'physics_step' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/physics_step.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'physics_step' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/physics_step.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'object_physics' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/object_physics.v:19]
+INFO: [Synth 8-6157] synthesizing module 'kitchen' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/kitchen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'kitchen' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/kitchen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'orders' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/orders.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'orders' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/orders.v:13]
+INFO: [Synth 8-6157] synthesizing module 'predictor' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/predictor.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'predictor' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/predictor.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'game_core' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/game_core.v:10]
+INFO: [Synth 8-6157] synthesizing module 'vga_renderer' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/vga_renderer.v:14]
+INFO: [Synth 8-6157] synthesizing module 'item_sprite' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/item_sprite.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'item_sprite' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/item_sprite.v:12]
+INFO: [Synth 8-6157] synthesizing module 'digits' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/digits.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'digits' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/digits.v:6]
+INFO: [Synth 8-6157] synthesizing module 'text_field' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 100 - type: integer 
+	Parameter Y0 bound to: 4 - type: integer 
+	Parameter N bound to: 3 - type: integer 
+	Parameter SHIFT bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'font5x7' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/font5x7.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'font5x7' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/font5x7.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'text_field' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized0' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 128 - type: integer 
+	Parameter Y0 bound to: 4 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+	Parameter SHIFT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized0' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized1' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 40 - type: integer 
+	Parameter Y0 bound to: 46 - type: integer 
+	Parameter N bound to: 5 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized1' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized2' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 32 - type: integer 
+	Parameter Y0 bound to: 46 - type: integer 
+	Parameter N bound to: 6 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized2' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized3' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 72 - type: integer 
+	Parameter Y0 bound to: 46 - type: integer 
+	Parameter N bound to: 1 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized3' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized4' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 56 - type: integer 
+	Parameter Y0 bound to: 66 - type: integer 
+	Parameter N bound to: 6 - type: integer 
+	Parameter SHIFT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized4' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized5' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 56 - type: integer 
+	Parameter Y0 bound to: 62 - type: integer 
+	Parameter N bound to: 3 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized5' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'vga_renderer' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/vga_renderer.v:14]
+INFO: [Synth 8-6157] synthesizing module 'oled_renderer' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/oled_renderer.v:13]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized6' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 2 - type: integer 
+	Parameter Y0 bound to: 40 - type: integer 
+	Parameter N bound to: 3 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized6' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized7' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 60 - type: integer 
+	Parameter Y0 bound to: 42 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+	Parameter SHIFT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized7' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized8' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 8 - type: integer 
+	Parameter Y0 bound to: 10 - type: integer 
+	Parameter N bound to: 5 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized8' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized9' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 0 - type: integer 
+	Parameter Y0 bound to: 24 - type: integer 
+	Parameter N bound to: 6 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized9' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized10' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 40 - type: integer 
+	Parameter Y0 bound to: 24 - type: integer 
+	Parameter N bound to: 1 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized10' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized11' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 24 - type: integer 
+	Parameter Y0 bound to: 40 - type: integer 
+	Parameter N bound to: 6 - type: integer 
+	Parameter SHIFT bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized11' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6157] synthesizing module 'text_field__parameterized12' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+	Parameter X0 bound to: 24 - type: integer 
+	Parameter Y0 bound to: 36 - type: integer 
+	Parameter N bound to: 3 - type: integer 
+	Parameter SHIFT bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'text_field__parameterized12' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/text_field.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'oled_renderer' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/oled_renderer.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/Oled_Display.v:34]
+INFO: [Synth 8-226] default block is never used [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/Oled_Display.v:120]
+INFO: [Synth 8-226] default block is never used [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/Oled_Display.v:195]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/Oled_Display.v:343]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/Oled_Display.v:34]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/seven_seg.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/seven_seg.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'My_Top_Module' (0#1) [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/src/My_Top_Module.v:29]
+WARNING: [Synth 8-3917] design My_Top_Module has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port JC[2] driven by constant 0
+WARNING: [Synth 8-7129] Port h[1] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port h[0] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v[9] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v[1] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port v[0] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[87] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[86] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[85] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[84] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[75] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[74] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[73] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[72] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[63] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[62] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[61] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[60] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[51] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[50] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[49] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[48] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[39] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[38] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[37] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[36] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[27] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[26] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[25] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[24] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[15] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[14] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[13] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[12] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[3] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[2] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[1] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_x_flat[0] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[95] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[87] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[86] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[85] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[84] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[83] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[75] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[74] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[73] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[72] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[71] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[63] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[62] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[61] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[60] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[59] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[51] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[50] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[49] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[48] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[47] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[39] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[38] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[37] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[36] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[35] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[27] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[26] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[25] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[24] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[23] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[15] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[14] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[13] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[12] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[11] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[3] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[2] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[1] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_y_flat[0] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[66] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[65] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[64] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[63] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[57] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[56] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[55] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[54] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[48] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[47] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[46] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[45] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[39] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[38] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[37] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[36] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[30] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[29] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[28] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[27] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[21] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[20] in module vga_renderer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ph_z_flat[19] in module vga_renderer is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1491.617 ; gain = 778.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1491.617 ; gain = 778.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1491.617 ; gain = 778.039
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.237 . Memory (MB): peak = 1491.617 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/My_Top_Module_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/My_Top_Module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1569.902 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1569.902 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1569.902 ; gain = 856.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1569.902 ; gain = 856.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1569.902 ; gain = 856.324
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'game_flow'
+INFO: [Synth 8-802] inferred FSM for state register 'st_reg' in module 'kitchen'
+INFO: [Synth 8-802] inferred FSM for state register 'ps_reg' in module 'predictor'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                 iSTATE0 |                               01 |                               01
+                 iSTATE2 |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 F_READY |                              000 |                              000
+                 F_COUNT |                              001 |                              001
+                  F_PLAY |                              010 |                              010
+                 F_PAUSE |                              011 |                              011
+               F_RESULTS |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'game_flow'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE2 |                              010 |                              010
+                 iSTATE3 |                              011 |                              011
+                 iSTATE1 |                              100 |                              100
+                 iSTATE4 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'st_reg' using encoding 'sequential' in module 'kitchen'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  P_IDLE |                               00 |                               00
+                  P_INIT |                               01 |                               01
+                   P_RUN |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ps_reg' using encoding 'sequential' in module 'predictor'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 PowerUp | 00000000100000000000000000000000 |                            00000
+                   Reset | 00000000000100000000000000000000 |                            00001
+            ReleaseReset | 00000000000000000000100000000000 |                            00011
+            EnableDriver | 00000000000000000001000000000000 |                            00010
+              DisplayOff | 00000000000000000100000000000000 |                            00110
+   SetRemapDisplayFormat | 00000100000000000000000000000000 |                            00111
+            SetStartLine | 00001000000000000000000000000000 |                            00101
+               SetOffset | 10000000000000000000000000000000 |                            00100
+        SetNormalDisplay | 00000000000000000000000010000000 |                            01100
+       SetMultiplexRatio | 00000000000000000000000000100000 |                            01101
+  SetMasterConfiguration | 00000000000000000000000001000000 |                            01111
+        DisablePowerSave | 00000000000000000000000000000100 |                            01110
+          SetPhaseAdjust | 00000000000000000000000000001000 |                            01010
+         SetDisplayClock | 00000000001000000000000000000000 |                            01011
+     SetSecondPrechargeA | 00000000010000000000000000000000 |                            01001
+     SetSecondPrechargeB | 01000000000000000000000000000000 |                            01000
+     SetSecondPrechargeC | 00000010000000000000000000000000 |                            11000
+       SetPrechargeLevel | 00000001000000000000000000000000 |                            11001
+                SetVCOMH | 00000000000000010000000000000000 |                            11011
+        SetMasterCurrent | 00000000000000100000000000000000 |                            11010
+            SetContrastA | 00000000000001000000000000000000 |                            11110
+            SetContrastB | 00100000000000000000000000000000 |                            11111
+            SetContrastC | 00000000000000000000000000000001 |                            11101
+        DisableScrolling | 00000000000000000000000000000010 |                            11100
+             ClearScreen | 00000000000000000000000000010000 |                            10100
+                   VccEn | 00010000000000000000000000000000 |                            10101
+               DisplayOn | 00000000000010000000000000000000 |                            10111
+        PrepareNextFrame | 00000000000000001000000000000000 |                            10110
+           SetColAddress | 00000000000000000000010000000000 |                            10010
+           SetRowAddress | 00000000000000000000000100000000 |                            10011
+           WaitNextFrame | 00000000000000000000001000000000 |                            10001
+               SendPixel | 00000000000000000010000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1569.902 ; gain = 856.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 18    
+	   2 Input   12 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 10    
+	   2 Input   10 Bit       Adders := 4     
+	   3 Input   10 Bit       Adders := 25    
+	   2 Input    9 Bit       Adders := 31    
+	   3 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 124   
+	   3 Input    8 Bit       Adders := 49    
+	   2 Input    7 Bit       Adders := 36    
+	   3 Input    7 Bit       Adders := 25    
+	   2 Input    6 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 30    
+	   2 Input    3 Bit       Adders := 21    
+	   3 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 3     
+	   3 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   6 Input      8 Bit         XORs := 1     
+	   4 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               56 Bit    Registers := 2     
+	               48 Bit    Registers := 2     
+	               40 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 40    
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 11    
+	                8 Bit    Registers := 56    
+	                7 Bit    Registers := 17    
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 11    
+	                4 Bit    Registers := 49    
+	                3 Bit    Registers := 18    
+	                2 Bit    Registers := 27    
+	                1 Bit    Registers := 110   
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 4     
+	   3 Input   64 Bit        Muxes := 2     
+	   2 Input   56 Bit        Muxes := 4     
+	   3 Input   56 Bit        Muxes := 2     
+	   2 Input   46 Bit        Muxes := 2     
+	   2 Input   40 Bit        Muxes := 3     
+	  32 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   25 Bit        Muxes := 2     
+	  31 Input   20 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 6     
+	   3 Input   13 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 249   
+	   4 Input   12 Bit        Muxes := 17    
+	   3 Input   12 Bit        Muxes := 14    
+	   5 Input   12 Bit        Muxes := 1     
+	   4 Input   11 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 56    
+	   2 Input    9 Bit        Muxes := 68    
+	   5 Input    9 Bit        Muxes := 10    
+	   7 Input    9 Bit        Muxes := 1     
+	   4 Input    9 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 261   
+	   5 Input    8 Bit        Muxes := 9     
+	   6 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 75    
+	   3 Input    7 Bit        Muxes := 1     
+	   5 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 3     
+	   2 Input    6 Bit        Muxes := 5     
+	   5 Input    6 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 24    
+	  31 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 37    
+	   5 Input    5 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 6     
+	  32 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 112   
+	   3 Input    4 Bit        Muxes := 43    
+	   5 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 28    
+	   3 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 11    
+	   7 Input    3 Bit        Muxes := 5     
+	   6 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 117   
+	   5 Input    2 Bit        Muxes := 7     
+	   6 Input    2 Bit        Muxes := 2     
+	   7 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 595   
+	   4 Input    1 Bit        Muxes := 70    
+	   5 Input    1 Bit        Muxes := 133   
+	   7 Input    1 Bit        Muxes := 21    
+	   8 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design My_Top_Module has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design My_Top_Module has port JC[2] driven by constant 0
+WARNING: [Synth 8-3332] Sequential element (u_tx/FSM_onehot_state_reg[3]) is unused and will be removed from module link.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:02:43 . Memory (MB): peak = 1982.184 ; gain = 1268.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|font5x7     | bits       | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
+|text_field  | f/bits     | 256x5         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 6 of C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc. [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc:6]
+CRITICAL WARNING: [Synth 8-3321] create_generated_clock attempting to set clock on an unknown port/pin for constraint at line 7 of C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc. [C:/Users/cheeh/Desktop/Physics_Kitchen_S3_02/constr/Basys3_Master.xdc:7]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:02:51 . Memory (MB): peak = 1982.184 ; gain = 1268.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:46 ; elapsed = 00:02:54 . Memory (MB): peak = 1982.184 ; gain = 1268.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:53 ; elapsed = 00:03:01 . Memory (MB): peak = 1982.184 ; gain = 1268.605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:00 ; elapsed = 00:03:09 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:00 ; elapsed = 00:03:09 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:01 ; elapsed = 00:03:10 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:01 ; elapsed = 00:03:10 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:01 ; elapsed = 00:03:10 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:01 ; elapsed = 00:03:10 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |   492|
+|3     |LUT1   |   162|
+|4     |LUT2   |  1482|
+|5     |LUT3   |  1096|
+|6     |LUT4   |  1438|
+|7     |LUT5   |  1469|
+|8     |LUT6   |  3517|
+|9     |MUXF7  |   118|
+|10    |MUXF8  |     7|
+|11    |FDRE   |  2031|
+|12    |FDSE   |    25|
+|13    |IBUF   |    17|
+|14    |OBUF   |    51|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:10 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:41 ; elapsed = 00:03:03 . Memory (MB): peak = 1996.422 ; gain = 1204.559
+Synthesis Optimization Complete : Time (s): cpu = 00:03:02 ; elapsed = 00:03:10 . Memory (MB): peak = 1996.422 ; gain = 1282.844
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.215 . Memory (MB): peak = 2011.426 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 617 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2015.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 60068d64
+INFO: [Common 17-83] Releasing license: Synthesis
+110 Infos, 118 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:12 ; elapsed = 00:03:40 . Memory (MB): peak = 2015.281 ; gain = 1490.949
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2015.281 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/cheeh/Desktop/FDP2026/FDP2026.runs/synth_1/My_Top_Module.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file My_Top_Module_utilization_synth.rpt -pb My_Top_Module_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 03:09:28 2026...
